@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D99A407D1A126ED200BCBC45 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99A407C1A126ED200BCBC45 /* Parser.swift */; };
+		D9A3BED51A13C54900DDF476 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D9A3BED41A13C54900DDF476 /* README.md */; };
 		D9E12F531A0A125100A80241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E12F521A0A125100A80241 /* AppDelegate.swift */; };
 		D9E12F551A0A125100A80241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E12F541A0A125100A80241 /* ViewController.swift */; };
 		D9E12F581A0A125100A80241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9E12F561A0A125100A80241 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		D99A407C1A126ED200BCBC45 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D9A3BED41A13C54900DDF476 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D9E12F4D1A0A125000A80241 /* ParserJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParserJson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E12F511A0A125100A80241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9E12F521A0A125100A80241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				D99A407C1A126ED200BCBC45 /* Parser.swift */,
 				D9E12F741A0A16D800A80241 /* Photo.swift */,
 				D9E12F561A0A125100A80241 /* Main.storyboard */,
+				D9A3BED41A13C54900DDF476 /* README.md */,
 				D9E12F591A0A125100A80241 /* Images.xcassets */,
 				D9E12F5B1A0A125100A80241 /* LaunchScreen.xib */,
 				D9E12F501A0A125100A80241 /* Supporting Files */,
@@ -224,6 +227,7 @@
 			files = (
 				D99A407D1A126ED200BCBC45 /* Parser.swift in Sources */,
 				D9E12F751A0A16D800A80241 /* Photo.swift in Sources */,
+				D9A3BED51A13C54900DDF476 /* README.md in Sources */,
 				D9E12F551A0A125100A80241 /* ViewController.swift in Sources */,
 				D9E12F531A0A125100A80241 /* AppDelegate.swift in Sources */,
 			);
