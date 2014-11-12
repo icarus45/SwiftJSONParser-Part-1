@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let parserReader = readJsonFile("test")
+        let parserTestReader = readJsonFile("test")
         let parser = Parser()
-        parser.start(parserReader) { (photo : Photo) -> () in
+        parser.start(parserTestReader) { (photo : Photo) -> () in
             
             println(photo.data + ": " + photo.titolo)
         }
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         } else {
             
-            error = NSError(domain: "Parser", code: 100, userInfo: [NSLocalizedDescriptionKey:"The file was not found"]);
+            error = NSError(domain: "ParserReader", code: 100, userInfo: [NSLocalizedDescriptionKey:"The file was not found"]);
         }
         
         var result : ReaderResult

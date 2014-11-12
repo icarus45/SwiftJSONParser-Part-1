@@ -20,7 +20,7 @@ class Parser {
     typealias ParserNewPhoto = (Photo)->()
     
     func handleError(error : NSError) {
-        println(error);
+        println(error.localizedDescription);
     }
     
 func handleData(data : NSData, parserNewPhoto : ParserNewPhoto) {
@@ -28,29 +28,30 @@ func handleData(data : NSData, parserNewPhoto : ParserNewPhoto) {
     var error : NSError?
     let json : AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error)
 
-    if let _json = json as? [AnyObject] {
-        
-        for jsonItem in _json {
+        if let _json = json as? [AnyObject] {
             
-            if let _jsonItem = jsonItem as? [String: AnyObject] {
-     
-                let titolo : AnyObject? = _jsonItem["titolo"]
-                let autore : AnyObject? = _jsonItem["autore"]
-                let latitudine : AnyObject? = _jsonItem["latitudine"]
-                let longitudine : AnyObject? = _jsonItem["longitudine"]
-                let data : AnyObject? = _jsonItem["data"]
-                let descr : AnyObject? = _jsonItem["descr"]
+            for jsonItem in _json {
+                
+                if let _jsonItem = jsonItem as? [String: AnyObject] {
+         
+                    let titolo : AnyObject? = _jsonItem["titolo"]
+                    let autore : AnyObject? = _jsonItem["autore"]
+                    let latitudine : AnyObject? = _jsonItem["latitudine"]
+                    let longitudine : AnyObject? = _jsonItem["longitudine"]
+                    let data : AnyObject? = _jsonItem["data"]
+                    let descr : AnyObject? = _jsonItem["descr"]
 
-                if let _titolo = titolo as String? {
-                    if let _autore = autore as? String {
-                        if let _latitudine = latitudine as? Double {
-                            if let _longitudine = longitudine as? Double {
-                                if let _data = data as? String {
-                                    if let _descr = descr as? String {
-                                        
-                                        let photo = Photo(titolo: _titolo, autore: _autore, latitudine: _latitudine, longitudine: _longitudine, data: _data, descr: _descr)
-                                        
-                                        parserNewPhoto(photo)
+                    if let _titolo = titolo as String? {
+                        if let _autore = autore as? String {
+                            if let _latitudine = latitudine as? Double {
+                                if let _longitudine = longitudine as? Double {
+                                    if let _data = data as? String {
+                                        if let _descr = descr as? String {
+                                            
+                                            let photo = Photo(titolo: _titolo, autore: _autore, latitudine: _latitudine, longitudine: _longitudine, data: _data, descr: _descr)
+                                            
+                                            parserNewPhoto(photo)
+                                        }
                                     }
                                 }
                             }
@@ -60,7 +61,6 @@ func handleData(data : NSData, parserNewPhoto : ParserNewPhoto) {
             }
         }
     }
-}
     
     func start(reader : ParserReader, parserNewPhoto : ParserNewPhoto) {
         
