@@ -1,4 +1,4 @@
-Swift-JSON-Parser---Part-1
+SwiftJSONParser-Part-1
 ==========================
 
 Code for the article "Swift JSON Parser - Part 1" on Tabasoft coding:
