@@ -23,10 +23,10 @@ class Parser {
         println(error.localizedDescription);
     }
     
-func handleData(data : NSData, parserNewPhoto : ParserNewPhoto) {
+    func handleData(data : NSData, parserNewPhoto : ParserNewPhoto) {
 
-    var error : NSError?
-    let json : AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error)
+        var error : NSError?
+        let json : AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error)
 
         if let _json = json as? [AnyObject] {
             
